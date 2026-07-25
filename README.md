@@ -1,6 +1,6 @@
 <div align="center">
 
-# Hi there, I'm 李铭泽 👋
+# Hi people, I'm 李铭泽 👋
 
 **计算机科学与技术学生 · 用代码把想法做成真正能用的工具**  
 **Computer Science student · Turning ideas into useful software**

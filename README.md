@@ -54,7 +54,6 @@ I'm a Computer Science and Technology student at the Sydney Institute of Intelli
 ## 📫 联系我 / Let's Connect
 
 - 🌐 个人网站 / Portfolio: [tobyberry666.github.io](https://tobyberry666.github.io/)
-- 💻 GitHub: [@tobyberry666](https://github.com/tobyberry666)
 - ✉️ Email: [broccoli_finding@qq.com](mailto:broccoli_finding@qq.com)
 
 > 如果你也在做有趣的学习工具、效率工具或算法可视化项目，欢迎交流。  

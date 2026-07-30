@@ -8,22 +8,25 @@ on:
   workflow_dispatch: {}
 
 jobs:
-  # 单卡：统计（关注者/星标/提交/仓库）+ 常用语言，一次生成，避免空卡与限流。
   metrics:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      METRICS_USER: tobyberry666
     steps:
       - uses: actions/checkout@v4
-      - name: Generate metrics card
-        uses: lowlighter/metrics@latest
-        with:
-          filename: github-metrics.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-          user: tobyberry666
-          base: header, activity, community, repositories
-          config_timezone: Asia/Shanghai
-          plugin_languages: yes
-          plugin_languages_limit: 8
-          plugin_languages_details: bytes-size, percentage
-          plugin_languages_sections: most-used
+      - name: Generate flat SVG (no foreignObject, camo-safe)
+        run: python3 generate_metrics.py
+      - name: Commit & push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add github-metrics.svg
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "chore: refresh github-metrics.svg"
+            git push
+          fi

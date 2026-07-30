@@ -8,14 +8,14 @@ on:
   workflow_dispatch: {}
 
 jobs:
-  # ---- 卡片 1：GitHub 统计（关注者 / 星标 / 提交 / 仓库等）----
-  metrics-stats:
+  # 单卡：统计（关注者/星标/提交/仓库）+ 常用语言，一次生成，避免空卡与限流。
+  metrics:
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
       - uses: actions/checkout@v4
-      - name: Generate stats card
+      - name: Generate metrics card
         uses: lowlighter/metrics@latest
         with:
           filename: github-metrics.svg
@@ -23,25 +23,7 @@ jobs:
           user: tobyberry666
           base: header, activity, community, repositories
           config_timezone: Asia/Shanghai
-          plugin_languages: no
-
-  # ---- 卡片 2：常用语言占比（串行，避免两次提交冲突）----
-  metrics-langs:
-    needs: metrics-stats
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@v4
-      - name: Generate languages card
-        uses: lowlighter/metrics@latest
-        with:
-          filename: languages.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-          user: tobyberry666
-          base: ""
           plugin_languages: yes
           plugin_languages_limit: 8
           plugin_languages_details: bytes-size, percentage
           plugin_languages_sections: most-used
-          config_timezone: Asia/Shanghai

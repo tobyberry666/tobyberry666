@@ -47,8 +47,7 @@ I'm a Computer Science and Technology student at the Sydney Institute of Intelli
 ## 📊 GitHub 一览 / GitHub Snapshot
 
 <div align="center">
-  <img height="165" src="github-metrics.svg" alt="tobyberry666's GitHub stats" />
-  <img height="165" src="languages.svg" alt="Top languages" />
+  <img src="github-metrics.svg" width="480" alt="tobyberry666's GitHub stats & languages" />
 </div>
 
 ## 📫 联系我 / Let's Connect

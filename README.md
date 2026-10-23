@@ -26,10 +26,20 @@ I'm a Computer Science and Technology student at the Sydney Institute of Intelli
 
 | Project | What I built / 项目亮点 | Stack |
 | --- | --- | --- |
+| 📈 [**vc-expo-intelligence — 全球创投与科技展会情报平台**](https://github.com/tobyberry666/vc-expo-intelligence)<br>*VC & Tech Expo Intelligence Platform* | 模块化单体全栈项目：聚合公开融资 RSS 与主办方展会日程，每小时自动采集并部署到 GitHub Pages；列表筛选与视图状态全量同步进 URL，公开/平台双运行模式；ESLint + Vitest 覆盖率门禁 + Playwright e2e + npm audit 门禁的完整工程链路，未知字段不补造成事实。<br>**A modular-monolith platform aggregating funding RSS feeds and expo schedules with hourly automated collection, URL-synced filters, and a full quality gate: ESLint, coverage thresholds, Playwright e2e, and npm audit.** | TypeScript · React · Vite · Playwright |
 | 🥦 [**Broccoli — 视频 AI 总结站**](https://github.com/tobyberry666/Broccoli)<br>*Video-to-Markdown AI Summarizer* | 可自部署的多用户 Web 应用：FunASR 中文转写 → 豆包视觉看图 → DeepSeek 成稿的三级 AI 流水线，自动生成图文速览 Markdown；账号体系、文件按用户隔离与接口属主校验；支持对视频 AI 提问，Docker 一键部署。<br>**A self-hosted multi-user web app that turns videos into illustrated Markdown summaries via a three-stage AI pipeline (FunASR → Doubao Vision → DeepSeek), with per-user file isolation and AI Q&A over video content.** | FastAPI · FunASR · 豆包视觉 · DeepSeek |
 | 🥬 [**Cabbage — 抖音无水印下载站**](https://github.com/tobyberry666/Cabbage)<br>*Douyin Watermark-Free Downloader* | 局域网自托管的抖音下载小站：内置逆向解析层（X-Bogus/Abogus 签名、匿名 ttwid 自生成），粘贴链接一键拉取、在线预览、无水印下载；异步流式转发把手机端下载吞吐从 0.43MB/s 提到 7.9MB/s，修复 Safari 下载 0KB 问题。<br>**A LAN self-hosted Douyin downloader with a vendored reverse-engineered resolver (X-Bogus/Abogus signatures, self-generated anonymous ttwid) and async streaming that lifted mobile throughput from 0.43 to 7.9 MB/s.** | FastAPI · 逆向解析 · 异步流式 |
-| 🎞️ [**多语言算法可视化教学平台**](https://github.com/tobyberry666/code-visualier)<br>*Multi-language Algorithm Visualizer* | 自动识别 Python / JavaScript / Java / C / C++ 代码，并将数组、链表、树、图等执行过程逐步动画化，帮助初学者理解算法。<br>**Recognizes code in five languages and animates arrays, linked lists, trees, and graphs step by step for algorithm learning.** | TypeScript · Canvas |
+| 🎞️ [**多语言算法可视化教学平台**](https://github.com/tobyberry666/code-visualizer)<br>*Multi-language Algorithm Visualizer* | 自动识别 Python / JavaScript / Java / C / C++ 代码，并将数组、链表、树、图等执行过程逐步动画化，帮助初学者理解算法。<br>**Recognizes code in five languages and animates arrays, linked lists, trees, and graphs step by step for algorithm learning.** | TypeScript · PixiJS · Pyodide |
 | 📚 [**雅思分级背单词器**](https://github.com/tobyberry666/ielts-graded-vocab)<br>*IELTS Graded Vocabulary Trainer* | 基于 FSRS 间隔重复与柯林斯式分级闪卡，2,500+ 词汇按 IELTS Band 5–7+ 分层推送；IndexedDB 本地优先存储，核心逻辑带 Vitest 测试与 CI。<br>**An FSRS-powered spaced-repetition trainer with 2,500+ graded vocabulary entries for IELTS Band 5–7+, local-first IndexedDB storage, and Vitest-tested core logic with CI.** | TypeScript · FSRS · IndexedDB |
+
+### 🗂️ 更多项目 / More Projects
+
+| Project | 一句话介绍 / One-liner | Stack |
+| --- | --- | --- |
+| 🗓️ [竞赛日历](https://github.com/tobyberry666/competition-calendar) | 全网大学生竞赛信息聚合：9 个数据源 + 模糊去重与置信度合并，GitHub Actions 每日 7 点自动采集并部署 Pages，零服务器成本。 | Python · GitHub Actions |
+| 🎙️ [声音克隆工坊](https://github.com/tobyberry666/gpt-sovits-headless-kit) | 把 GPT-SoVITS v2Pro 包装成网页应用：录音 → 训练 → 合成三步出 AI 音色；附对上游 Windows 单卡/Blackwell 训练崩溃的 patch。 | Python · PyTorch |
+| 📄 [PDF--HTML](https://github.com/tobyberry666/PDF--HTML) | 文字型 PDF → 可选中、可批注的网页：按 span 坐标抽取版式与内嵌图，几百页的书只产出 2 个 JSON，仅扫描页才栅格化兜底。 | Python · PyMuPDF |
+| 🤖 [Agent Skills](https://github.com/tobyberry666/broccoli-finding) · [confirm-before-acquiring](https://github.com/tobyberry666/confirm-before-acquiring) | 两个开源 AI Agent Skill：元认知「先搜后做、查不到就说查不到」，以及下载/安装/建文件前的强制确认门，兼容 agentskills.io 规范。 | Markdown · Skill Spec |
 
 ## 🧰 技术工具箱 / Toolkit
 
